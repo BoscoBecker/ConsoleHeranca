@@ -23,8 +23,7 @@ namespace ConsoleHeranca.Entities.BussinessAccount
             this.LoanLimit = loanLimit;
         }
 
-        public BussinessAccount(int number, string holder, double balance, double loanLimit) 
-                : base(number, holder, balance)
+        public BussinessAccount(int number, string holder, double balance, double loanLimit) : base(number, holder, balance)
         {
             this.LoanLimit = loanLimit;
         }
