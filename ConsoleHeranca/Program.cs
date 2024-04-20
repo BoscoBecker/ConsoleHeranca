@@ -13,27 +13,36 @@ namespace ConsoleHeranca {
 
             /*         **UPCASTING**       */
 
-            Account acc1 = Ba;
-            Account acc2 = new BussinessAccount(2040, "Joao", 0.0, 500.00);
-            Account acc3 = new SavingAccount(2040, "Maria", 20.00, 0.01);            
+            //Account acc1 = Ba;
+            //Account acc2 = new BussinessAccount(2040, "Joao", 0.0, 500.00);
+            //Account acc3 = new SavingAccount(2040, "Maria", 20.00, 0.01);            
 
-            /*        **DOWNCASTING** UNSAFE    */
-            BussinessAccount acc4 = (BussinessAccount)acc2;
-                             acc4.Loan(500.50); /// Yes, Method of BussinessAccount class
+            ///*        **DOWNCASTING** UNSAFE    */
+            //BussinessAccount acc4 = (BussinessAccount)acc2;
+            //                 acc4.Loan(500.50); /// Yes, Method of BussinessAccount class
             //BussinessAccount acc5 = (BussinessAccount)acc3;/// Sintaxe OK,  but run-time erro, different types
             //BussinessAccount acc5 = acc3 as BussinessAccount; Another way using as
-            if (acc3 is BussinessAccount) {
-                BussinessAccount acc5 = (BussinessAccount)acc3;
-                
-            }
+            //if (acc3 is BussinessAccount) {
+            //    BussinessAccount acc5 = (BussinessAccount)acc3;
 
-            if (acc3 is SavingAccount) {
-                SavingAccount acc5 = (SavingAccount)acc3;
-                acc5.UpdateBalance();
-            
-            }
+            //}
 
-            Console.WriteLine(Ba);
+            //if (acc3 is SavingAccount) {
+            //    SavingAccount acc5 = (SavingAccount)acc3;
+            //    acc5.UpdateBalance();
+
+            //}
+            //Console.WriteLine(Ba);
+
+            Account acc10 = new Account(1001, "Alex",500.0);
+            Account acc11 = new SavingAccount(1002,"Anna",500.0,0.1);
+
+            acc10.Withdraw(10.0);
+            acc11.Withdraw(10.0);
+
+            Console.WriteLine(acc10.Balance);
+            Console.WriteLine(acc11.Balance);
+
         }
     
     }

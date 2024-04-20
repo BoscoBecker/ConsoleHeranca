@@ -1,5 +1,4 @@
 ﻿using ConsoleHeranca.Entities.Accounts;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleHeranca.Entities.SavingsAccount
 {
@@ -13,9 +12,15 @@ namespace ConsoleHeranca.Entities.SavingsAccount
             InterestRate = interestRate;
         }
 
+        public override void Withdraw(double amount)
+        {
+            Balance -= amount;
+            // base.Withdraw(amount); /// Aqui é um exemplo que quiser aproveitar o método da classe base, de herança.
+            // Balance -=2.0;
+        }
         public void UpdateBalance()
         {
-            balance += balance * InterestRate;
+            Balance += Balance * InterestRate;
         }
     }
 }

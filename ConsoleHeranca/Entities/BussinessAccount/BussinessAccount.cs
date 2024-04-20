@@ -11,7 +11,7 @@ namespace ConsoleHeranca.Entities.BussinessAccount
         {
             if ( amount <= LoanLimit)
             {
-                this.balance += amount;
+                this.Balance += amount;
             }
             
         }
@@ -33,7 +33,7 @@ namespace ConsoleHeranca.Entities.BussinessAccount
             StringBuilder sbAccount = new StringBuilder();
             sbAccount.AppendLine("Number Acccount: " + this.number);
             sbAccount.AppendLine("User: " + this.holder);
-            sbAccount.AppendLine("Current Balance: " + this.balance);
+            sbAccount.AppendLine("Current Balance: " + this.Balance);
             return sbAccount.ToString();
 
         }
